@@ -4,7 +4,7 @@ import CV from "../../assets/CV/DongHuuTrong_CV.pdf";
 function IntroComponent() {
   let { t } = useTranslation();
   return (
-    <div className="intro-component_container">
+    <div id="intro" className="intro-component_container">
       <div className="container">
         <div className="row" data-aos="fade-left" data-aos-duration="1000">
           <div className="content-left col-lg-5 col-md-5 col-sm-12">
@@ -17,7 +17,7 @@ function IntroComponent() {
               <i className="bx bxl-github"></i>
               <i className="bx bxl-facebook-circle"></i>
             </div>
-            <div className="button_wrapper">
+            <div className="button_wrapper" id="about">
               <a href={CV} download="DongHuuTrong-CV">
                 <button type="btn" className="btn btn_download">
                   {t("downloadCV")} .pdf

@@ -20,6 +20,10 @@ function MobileHeader() {
       window.removeEventListener("scroll", fixedNavMB);
     };
   }, []);
+
+  const redirect = (id) => {
+    window.location.href = `#${id}`;
+  };
   return (
     <div className="mobile-header_container">
       <div className="mobile-menu row">
@@ -33,16 +37,24 @@ function MobileHeader() {
           ></i>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenu">
             <li>
-              <div className="dropdown-item">{t("intro")}</div>
+              <div className="dropdown-item" onClick={() => redirect("intro")}>
+                {t("intro")}
+              </div>
             </li>
             <li>
-              <div className="dropdown-item">{t("aboutMe")}</div>
+              <div className="dropdown-item" onClick={() => redirect("about")}>
+                {t("aboutMe")}
+              </div>
             </li>
             <li>
-              <div className="dropdown-item">{t("projects")}</div>
+              <div className="dropdown-item" onClick={() => redirect("project")}>
+                {t("projects")}
+              </div>
             </li>
             <li>
-              <div className="dropdown-item">{t("contact")}</div>
+              <div className="dropdown-item" onClick={() => redirect("contact")}>
+                {t("contact")}
+              </div>
             </li>
           </ul>
         </div>

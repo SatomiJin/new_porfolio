@@ -3,7 +3,7 @@ import "./ContactComponent.scss";
 function ContactComponent() {
   let { t } = useTranslation();
   return (
-    <div className="contact_container">
+    <div id="contact" className="contact_container">
       <div className="container">
         <div className="row component_background" data-aos="flip-right" data-aos-duration="1000">
           <div className="contact_title col-12">{t("contact")}</div>

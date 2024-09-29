@@ -17,6 +17,7 @@ function AboutMeComponent() {
           </div>
           <div className="content-right col-lg-6 col-md-6 col-sm-12">
             <div className="image"></div>
+            <div id="project"></div>
           </div>
         </div>
       </div>

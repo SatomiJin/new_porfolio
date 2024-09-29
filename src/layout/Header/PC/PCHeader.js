@@ -20,14 +20,25 @@ const PCHeader = () => {
       window.removeEventListener("scroll", fixedNav);
     };
   }, []);
+  const redirect = (id) => {
+    window.location.href = `#${id}`;
+  };
   return (
     <div className="pc-header_container">
       <div className="row">
         <div className="header_item col-2">Satomi Jin</div>
-        <div className="header_item col-2">{t("intro")}</div>
-        <div className="header_item col-2">{t("aboutMe")}</div>
-        <div className="header_item col-2">{t("projects")}</div>
-        <div className="header_item col-2">{t("contact")}</div>
+        <div className="header_item col-2" onClick={() => redirect("intro")}>
+          {t("intro")}
+        </div>
+        <div className="header_item col-2" onClick={() => redirect("about")}>
+          {t("aboutMe")}
+        </div>
+        <div className="header_item col-2" onClick={() => redirect("project")}>
+          {t("projects")}
+        </div>
+        <div className="header_item col-2" onClick={() => redirect("contact")}>
+          {t("contact")}
+        </div>
         <div className="header_item col-2">
           <LanguageComponent />
         </div>
