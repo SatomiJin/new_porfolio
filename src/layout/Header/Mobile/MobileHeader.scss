@@ -1,0 +1,50 @@
+.mobile-header_container {
+  z-index: 1;
+  position: relative;
+  top: 0;
+  transition: all 0.5s ease;
+  &.fixed-nav_mb {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease;
+    background-color: rgba(0, 47, 86, 0.7);
+    backdrop-filter: blur(10px);
+  }
+  .mobile-menu {
+    padding: 1rem;
+
+    .mobile-menu_item {
+      //   flex: 1;
+      flex: 0;
+      cursor: pointer;
+      i {
+        font-size: 2rem;
+        transition: all 0.3s linear;
+      }
+      .dropdown-menu {
+        background-color: rgba(0, 47, 86, 0.6);
+        backdrop-filter: blur(10px);
+        .dropdown-item {
+          color: #fff;
+          transition: all 0.3s linear;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: #00ffff;
+        text-shadow: 3px 3px 10px rgba(0, 255, 255, 0.81);
+      }
+    }
+    .language,
+    .logo {
+      flex: 1;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+}

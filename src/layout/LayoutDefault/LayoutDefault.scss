@@ -1,0 +1,19 @@
+.layout-default_container {
+  .pc-header {
+    display: block;
+  }
+  .mobile-header {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .layout-default_container {
+    .pc-header {
+      display: none;
+    }
+    .mobile-header {
+      display: block;
+    }
+  }
+}

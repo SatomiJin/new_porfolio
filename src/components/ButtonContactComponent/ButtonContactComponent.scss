@@ -1,0 +1,103 @@
+.button-contact_container {
+  position: fixed;
+  bottom: 7%;
+  right: 2%;
+  z-index: 1;
+  .button_wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(255, 165, 0, 255);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    .item {
+      position: absolute;
+      opacity: 0;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        color: #000;
+        font-size: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      &.instagram.active {
+        left: -100%;
+        top: 100%;
+        opacity: 1;
+        &:hover {
+          background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+          i {
+            color: #fff;
+          }
+        }
+      }
+      &.tiktok.active {
+        top: -100%;
+        opacity: 1;
+        &:hover {
+          background-color: #000;
+          i {
+            color: #fff;
+          }
+        }
+      }
+      &.github.active {
+        top: -25%;
+        left: -70%;
+        opacity: 1;
+        &:hover {
+          background-color: #000;
+          i {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .button-contact_container {
+    bottom: 3%;
+    right: 2;
+  }
+}
+@media (max-width: 767px) {
+  .button-contact_container {
+    bottom: 3%;
+    right: 2%;
+
+    .button_wrapper {
+      width: 50px;
+      height: 50px;
+      i {
+        font-size: 1.5rem;
+      }
+      .item {
+        width: 40px;
+        height: 40px;
+        i {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

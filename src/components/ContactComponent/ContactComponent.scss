@@ -1,0 +1,75 @@
+.contact_container {
+  margin-bottom: 1rem;
+  .container {
+    .row {
+      padding: 1rem;
+      .contact_title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      .contact_items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        .item {
+          background-color: #0d47a1;
+          min-width: 300px;
+          width: fit-content;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          .item_title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+          }
+          .item_value {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contact_container {
+    margin-bottom: 1rem;
+    .container {
+      .row {
+        padding: 1rem;
+        .contact_title {
+          text-align: center;
+          font-size: 2rem;
+          font-weight: 600;
+        }
+        .contact_items {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact_container {
+    margin-bottom: 1rem;
+    .container {
+      .row {
+        padding: 1rem;
+        .contact_title {
+          text-align: center;
+          font-size: 2rem;
+          font-weight: 600;
+        }
+        .contact_items {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
