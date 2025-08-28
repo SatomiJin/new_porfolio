@@ -8,7 +8,7 @@ const PCHeader = () => {
     let nav = document.querySelector(".pc-header_container");
     let topOfNav = nav.offsetTop;
     const fixedNav = () => {
-      if (window.scrollY >= topOfNav && window.scrollY > 300) {
+      if (window.scrollY >= topOfNav && window.scrollY > 500) {
         nav.classList.add("fixed-nav");
       } else {
         nav.classList.remove("fixed-nav");
